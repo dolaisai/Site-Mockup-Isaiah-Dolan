@@ -4,18 +4,54 @@ Colors grabbed from Adobe After Effects
 2. Orange:      rgb(255, 141, 64);
 */
 
-/* --overall page styling for the body--*/
+/* --OVERALL PAGE STYLING FOR THE BODY TAG--*/
 body{
     background-color: black; 
     font-family: 'Shadows Into Light', cursive;
     text-decoration: none;
 }
 
-/* --navbar and its contents-- */
+/* --NAVBAR-- */
 .my-nav{
     height: 150px;
-    background-color: rgb(112, 128, 144); 
-    
+    background-color: rgb(112, 128, 144);  
+}
+/* size and position nav box */
+#nav-menu{
+    position: absolute; 
+    left: 300px;
+    top: 50px; 
+    background-color: white;
+    height: 50px; 
+    width: 450px; 
+    border-radius: 5px; 
+}
+/* move drop down menu to the right side of the page */
+.navbar-toggler{
+    margin-left: auto; 
+}
+/* move nav menu links down in the box */
+.nav-link{
+    margin-top: 4px; 
+    font-size: 1.1em;
+
+    /* set initial unfocused border to transparent */
+    border: 2px solid transparent;
+    border-radius: 6px; 
+    padding: 4px 10px;
+    transition: border-color 0.2s ease, 
+                box-shadow 0.2s ease;
+}
+/* setup hover and focus for nav links */
+.nav-link:hover, .nav-link:focus{ 
+    border-color: black;
+}
+/* adjust background box size for dropdown menu and add a border */
+@media (max-width: 767px){
+    #nav-menu{
+        height: 180px;
+        border: 2px solid; 
+    }
 }
 /* brand image styling and positioning */
 .navbar-brand{
@@ -27,7 +63,7 @@ body{
     background-size: contain; background-repeat: no-repeat; 
 }
 
-/* --main content and its contents-- */
+/* --MAIN CONTENT-- */
 /* main content background box styling */
 #main-content{
     background-color: white;
@@ -39,7 +75,7 @@ body{
 /* manually set main content box height when screen size is larger. */
 @media (min-width: 767px){
     #main-content{
-        height: 600px;
+        height: 650px;
     }
 }
 /* header styling */
@@ -49,9 +85,10 @@ h1{
     padding-top: 10px;
     font-size: 2em; 
 }
-/* move the text description for "Something Occurs */
+/* move the text description for "Something Occurs" */
 #main-content #something-desc{
     padding-left: 10px; 
+    color: grey;
 }
 /* Setup background color and styling for product columns */
 .product-box{

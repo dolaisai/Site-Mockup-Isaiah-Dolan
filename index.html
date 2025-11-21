@@ -14,19 +14,48 @@
             rel="stylesheet"
         />
         <link rel="stylesheet" href="css/styles.css">
+
+        <!-- prevent nav links from being in focus when the page is loaded. -->
+        <script>
+            window.addEventListener("load", () => {
+                document.activeElement?.blur();
+            });
+        </script>
     </head>
 
     <body>
+        <!-- Start of Navagation Header -->
         <header>
-            <nav id="header-nav" class="navbar navbar-expand-lg my-nav">
+            <nav id="header-nav" class="navbar navbar-expand-md my-nav">
                 <div class="container-fluid">
-                    <a class="navbar-brand" href="index.html"></a>
+                    <a class="navbar-brand" href="index.html">Brand</a>
+                </div>
+
+                <!--initialize navbar dropdown menu-->
+                <button class="navbar-toggler" type="button" 
+                    data-bs-toggle="collapse" 
+                    data-bs-target="#navbarSupportedContent" 
+                    aria-controls="navbarSupportedContent" 
+                    aria-expanded="false" 
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul id="nav-menu" class="navbar-nav mx-auto">
+                        <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Televisions</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Electronics</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Services</a></li>
+                    </ul>
                 </div>
             </nav>
         </header>
+
+        <!-- Start of Main Content -->
         <div id="main-content" class="container">
             <h1>Something Occurs</h1>
             <div id="something-desc">Within this space is some text, or other graphical representations of things that this page displays.</div>
+            <br>
             <h1>Products</h1>
             <br><br>
             <div id="product-tiles" class="row">
@@ -120,7 +149,9 @@
             </div>
         </div>
 
+        <!-- bootstrap JS reference -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+        
     </body>
     
 </html>
